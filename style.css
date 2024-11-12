@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0;
+    border-bottom: 1px solid #5d6b6b;
+    background-color: #c2d8b9;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+header a {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header a:hover {
+    color: rgb(39, 177, 39);
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/fundo1.png');
+    /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Impede repetição da imagem */
+    opacity: 0.6;
+    /* Opacidade da imagem de fundo */
+    z-index: -1;
+    /* Coloca a imagem atrás do conteúdo */
+}
