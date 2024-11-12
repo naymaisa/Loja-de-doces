@@ -54,13 +54,32 @@ body::before {
     /* Coloca a imagem atrás do conteúdo */
 }
 
+
 .container .sobre {
     margin-top: 20px;
     padding: 30px;
     background-color: #c2d8b9;
     border-radius: 2%;
+    display: flex;
+    /* Utilizando flexbox */
+    gap: 20px;
+    /* Espaço entre a imagem e o texto */
+    align-items: center;
+    /* Alinha verticalmente o conteúdo */
 }
 
-.sobre h2 {
-    margin-bottom: 10px;
+.sobre img {
+    max-width: 320px;
+    /* Define a largura máxima da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 8px;
+    /* Adiciona borda arredondada na imagem, se desejar */
+}
+
+.sobre h3 {
+    font-size: 16px;
+    /* Ajuste o tamanho do texto para não ficar grande demais */
+    line-height: 1.6;
+    /* Torna o texto mais legível */
 }
