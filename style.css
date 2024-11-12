@@ -34,16 +34,33 @@ header a:hover {
     color: rgb(39, 177, 39);
 }
 
+html,
+body {
+    height: 100%;
+    /* Garante que o html e body ocupem 100% da altura da tela */
+    margin: 0;
+    /* Remove margens padrão */
+}
+
+body {
+    position: relative;
+    /* Faz o body ser o contêiner de referência para o pseudo-elemento */
+    overflow-x: hidden;
+    /* Evita rolagem horizontal */
+}
+
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
+    /* Define como fixed para que a imagem ocupe toda a tela, independente do scroll */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    /* Garante que a imagem ocupe a tela inteira */
     background-image: url('./images/fundo1.png');
-    /* Imagem de fundo */
     background-size: cover;
+    /* Garante que a imagem cubra toda a tela */
     background-position: center;
     /* Centraliza a imagem */
     background-repeat: no-repeat;
@@ -51,35 +68,175 @@ body::before {
     opacity: 0.6;
     /* Opacidade da imagem de fundo */
     z-index: -1;
-    /* Coloca a imagem atrás do conteúdo */
+    /* Coloca a imagem atrás de todo o conteúdo */
 }
 
+button {
+    cursor: pointer;
+}
 
-.container .sobre {
+#about {
     margin-top: 20px;
-    padding: 30px;
+}
+
+.store-front {
+    width: auto;
+    /* Largura será ajustada automaticamente */
+    height: 300px;
+    /* Define a altura da imagem como 300px */
+}
+
+/*deixa um quadradinho no meio da tela */
+section {
     background-color: #c2d8b9;
+    padding: 48px 0;
+    flex-direction: column;
+    /* Para telas pequenas, empilhado */
+    max-width: 1200px;
+    /* Aumente a largura máxima das seções */
+    margin: 0 auto;
+    /* Centraliza a seção */
     border-radius: 2%;
+}
+
+div {
+    padding: 16px;
+}
+
+div p {
+    font-size: 18px;
+}
+
+.container-flex {
     display: flex;
-    /* Utilizando flexbox */
-    gap: 20px;
-    /* Espaço entre a imagem e o texto */
-    align-items: center;
-    /* Alinha verticalmente o conteúdo */
+    /*fica a imagem do lado do tesxto*/
 }
 
-.sobre img {
-    max-width: 320px;
-    /* Define a largura máxima da imagem */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    border-radius: 8px;
-    /* Adiciona borda arredondada na imagem, se desejar */
+h2 {
+    margin-left: 40px;
 }
 
-.sobre h3 {
-    font-size: 16px;
-    /* Ajuste o tamanho do texto para não ficar grande demais */
-    line-height: 1.6;
-    /* Torna o texto mais legível */
+section {
+    padding: 48px 0;
+    /*espaçamento*/
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-doces {
+    flex-wrap: wrap;
+}
+
+.lista-doces li {
+    list-style: none;
+    /*tira a bolinha de lista*/
+    max-width: 22%;
+    /*limitar o tamhno do item da lista, aqui temos 90% do campo preeenchido, os 10% que sobrarem vao pra margem do item central*/
+    margin-bottom: 24px;
+    /*margem entre as linhas da lista*/
+}
+
+.lista-doces img {
+    max-width: 100%;
+}
+
+.lista-doces li h3 {
+    margin: 16px 0;
+}
+
+/*esse vai ser aplicado so ao item da lista que esta no meio das fotos, no cado img 2,5 */
+.item-central {
+    margin: 0 2.5%;
+    /*os 10% que sobraram do max-width*/
+}
+
+footer {
+    background-color: #c2d8b9;
+    margin-top: 16px;
+}
+
+
+/* Layout Tablet (de 641px até 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .store-front {
+        width: 40%;
+        height: 300px;
+    }
+
+    /* Alteração para exibir 2 imagens lado a lado */
+    .lista-doces li {
+        max-width: 48%;
+        margin: 0 1% 24px 1%;
+        /* margem para separar as imagens */
+    }
+
+    .item-central {
+        margin: 0 0%;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+
+/* Layout Mobile (até 640px) */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header a {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .store-front {
+        width: 50%;
+        height: 250px;
+    }
+
+    .lista-doces li {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .price strong {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
 }

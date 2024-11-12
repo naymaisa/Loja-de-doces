@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,8 +15,8 @@
     <header>
         <div class="container">
             <h1>Kiki's Store</h1>
-            <a href="#">Sobre a loja</a>
-            <a href="#">Produtos</a>
+            <a href="#about">Sobre a loja</a>
+            <a href="#product">Produtos</a>
             <form class="pesquisa">
                 <input type="search" placeholder="Encontre na loja">
                 <button type="submit">Pesquisar</button>
@@ -25,23 +24,150 @@
         </div>
     </header>
 
-
-    <div class="container">
-        <section class=" sobre">
-            <article class="loja">
-                <img src="./images/loja.png" />
-                <div>
-                    <h2>Sobre a loja</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi earum qui maiores
-                        itaque. Voluptate consequuntur aperiam nostrum odit quibusdam asperiores itaque blanditiis et
-                        quaerat velit, perspiciatis veniam optio maxime!</p>
-                </div>
-            </article>
-
-        </section>
+    <section id="about">
+        <div class="container conteudo">
+            <img class="store-front" src="./images/loja.png" alt="Fachada da loja Games Shop" />
+            <div>
+                <h2>Sobre a loja</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sit sint vel debitis atque illo
+                    numquam officia ducimus, adipisci molestiae, at laborum accusamus modi ab! Odit labore ipsam neque
+                    deserunt?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, blanditiis, quas deserunt
+                    laboriosam repellendus dignissimos rerum consequuntur eos et cum aperiam vel id eius est natus
+                    quisquam necessitatibus fugiat ullam.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="product">
+        <div class="conteudo">
+            <h2>Em destaque</h2>
+            <div class="container">
+                <ul class="container-flex lista-doces">
+                    <li>
+                        <img src="./images/bolo.jpg" alt="bolo">
+                        <h3>Bolo</h3>
+                        <p>
+                            Bolo gostoso e macio
+                        </p>
+                        <div class="price">
+                            <strong>R$ 250,00</strong>
+                        </div>
+                        <button type="button" href="#">Adicionar ao carrinho</button>
+                    </li>
+                    <li class="item-central">
+                        <img src="./images/chocolate.jpg" alt="">
+                        <h3>Chocolates Variados</h3>
+                        <p>
+                            Bombons de chocolate
+                        </p>
+                        <div class="price">
+                            <strong>R$ 120,00</strong>
+                        </div>
+                        <button type="button" href="#">Adicionar ao carrinho</button>
+                    </li>
+                    <li>
+                        <img src="./images/christmas-cookies-2975570_1280.jpg" alt="">
+                        <h3>Biscoitos de chocolate</h3>
+                        <p>
+                            Biscoitos amanteigados.
+                        </p>
+                        <div class="price">
+                            <strong>R$ 98,00</strong>
+                        </div>
+                        <button type="button" href="#">Adicionar ao carrinho</button>
+                    </li>
+                    <li class="item-central">
+                        <img src="./images/cinnamon-rolls-1417494_1280.jpg" alt="">
+                        <h3>Cinnamon Rolls</h3>
+                        <p>
+                            Rocambole de canela.
+                        </p>
+                        <div class="price">
+                            <strong>R$ 60,00</strong>
+                        </div>
+                        <button type="button" href="#">Adicionar ao carrinho</button>
+                    </li>
+                    <li>
+                        <img src="./images/cookie-4245030_1280.jpg" alt="">
+                        <h3>Cookies de chocolate</h3>
+                        <p>
+                            Cookies com gotas de chocolate
+                        </p>
+                        <div class="price">
+                            <strong>R$ 72,00</strong>
+                        </div>
+                        <button type="button" href="#">Adicionar ao carrinho</button>
+                    </li>
+                </ul>
+            </div>
+    </section>
+    <section class="product">
+        <h2>Promoçao</h2>
+        <div class="container">
+            <ul class="container-flex lista-doces">
+                <li>
+                    <img src="./images/cupcakes.jpg" alt="bolo">
+                    <h3>Cupcake</h3>
+                    <p>
+                        Cupcake gostoso e macio
+                    </p>
+                    <div class="price">
+                        <del>R$ 120,00</del> <!--para ficar com o risco no escrito-->
+                        <strong>R$ 98,00</strong>
+                    </div>
+                    <button type="button" href="#">Adicionar ao carrinho</button>
+                </li>
+                <li class="item-central">
+                    <img src="./images/chocolatequente.jpg" alt="">
+                    <h3>Chocolate Quente</h3>
+                    <p>
+                        Chocolate quente cremoso
+                    </p>
+                    <div class=" price">
+                        <del>R$ 40,00</del> <!--para ficar com o risco no escrito-->
+                        <strong>R$ 35,00</strong>
+                    </div>
+                    <button type="button" href="#">Adicionar ao carrinho</button>
+                </li>
+                <li>
+                    <img src="./images/orange-cake-398966_1280.jpg" alt="">
+                    <h3>Bolo de laranja</h3>
+                    <p>
+                        Bolo de laranja macio
+                    </p>
+                    <div class="price">
+                        <del>R$ 160,00</del> <!--para ficar com o risco no escrito-->
+                        <strong>R$ 110,00</strong>
+                    </div>
+                    <button type="button" href="#">Adicionar ao carrinho</button>
+                </li>
+                <li class="item-central">
+                    <img src="./images/tiramisu.jpg" alt="">
+                    <h3>Tiramsu</h3>
+                    <p>
+                        Tiramsu
+                    </p>
+                    <div class="price">
+                        <del>R$ 150,00</del> <!--para ficar com o risco no escrito-->
+                        <strong>R$ 140,00</strong>
+                    </div>
+                    <button type="button" href="#">Adicionar ao carrinho</button>
+                </li>
+            </ul>
+        </div>
+    </section>
     </div>
-
-
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Kiki's Store - Todos os direitos reservados - 2024
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
