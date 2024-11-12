@@ -53,3 +53,14 @@ body::before {
     z-index: -1;
     /* Coloca a imagem atrás do conteúdo */
 }
+
+.container .sobre {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #c2d8b9;
+    border-radius: 2%;
+}
+
+.sobre h2 {
+    margin-bottom: 10px;
+}
